@@ -1,0 +1,44 @@
+# *******************
+# ECCO cost functions
+# *******************
+ &ECCO_COST_NML
+#
+ &
+# ***************************
+# ECCO generic cost functions
+# ***************************
+ &ECCO_GENCOST_NML
+#
+ gencost_avgperiod(7)  = 'month',
+ gencost_barfile(7) = 'm_theta_mon',
+ gencost_datafile(7) = 'some_T_atlas.bin',
+ gencost_errfile(7) = 'sigma_T_atlas2_eccollc.bin',
+ gencost_preproc(1,7)='clim',
+ gencost_name(7) = 'thetaclim',
+ gencost_preproc_i(1,7)=12,
+# gencost_preproc(1,7)='mean',
+# gencost_name(7) = 'thetamean',
+# gencost_preproc(1,7)='anom',
+# gencost_name(7) = 'thetaanom',
+# gencost_name(7) = 'thetarepeat',
+ gencost_spmin(7) = -1.8,
+ gencost_spmax(7) = 40.,
+ gencost_spzero(7) = 0.,
+ gencost_outputlevel(7)=1,
+ mult_gencost(7) = 1.,
+#
+ gencost_avgperiod(8)  = 'month',
+ gencost_barfile(8) = 'm_salt_mon',
+ gencost_datafile(8) = 'some_S_atlas.bin',
+ gencost_errfile(8) = 'sigma_S_atlas2_eccollc.bin',
+ gencost_preproc(1,8)='clim',
+ gencost_name(8) = 'saltclim',
+ gencost_preproc_i(1,8)=12,
+ gencost_spmin(8) = 25.,
+ gencost_spmax(8) = 40.,
+ gencost_spzero(8) = 0.,
+ gencost_outputlevel(8)=1,
+ mult_gencost(8) = 1.,
+#
+ &
+#
