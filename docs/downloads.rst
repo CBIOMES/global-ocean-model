@@ -1,10 +1,13 @@
 
 .. _downloads:
 
-Download / Analyze
-******************
+Download
+********
 
-This section provides directions to download `CBIOMES-global` output (:numref:`download-solution`), model setups to re-run `CBIOMES-global` solutions (:numref:`download-setup`), and tools to manipulate `CBIOMES-global` fields (:numref:`download-analysis`).
+This section provides directions to download `CBIOMES-global` model output
+(:numref:`download-solution`), the corresponding model setup
+(:numref:`download-setup`), and tools to manipulate
+model output (:numref:`download-tools`).
 
 .. _download-solution:
 
@@ -20,7 +23,9 @@ Download Model
 
 .. include:: cbiomes_setup.rst
 
-The :ref:`mitgcmdirs` is shown below. While organizing the downloaded directories differently is certainly possible, the :numref:`rerun-alpha-version` instructions to :ref:`baseline` the model is based on this organization.
+The :numref:`rerun-alpha-version` instructions to :ref:`baseline` the model
+and reproduce the output in :numref:`download-solution` are based on the
+:ref:`mitgcmdirs` shown below.
 
 .. _mitgcmdirs:
 
@@ -28,22 +33,41 @@ The :ref:`mitgcmdirs` is shown below. While organizing the downloaded directorie
 
 .. include:: cbiomes_dirtree.rst
 
-.. _download-analysis:
+.. note::
+
+   The above is not quite complete -- need to add biogeochemistry and ecosystem forcing.
+
+.. _download-tools:
 
 Download Tools
 --------------
 
-The `gcmfaces` toolbox :cite:`for-eta:15` can be used to manipulate inputs and outputs on the model's native grid, which users may have either been downloaded (:numref:`download-solution`) or generated themselves (:numref:`rerun-alpha-version`). From the command line, you can install either the `Matlab` version by executing:
+Interpolated output from :numref:`download-solution` can readily be displayed
+and analyzed using any `Netcdf <https://www.unidata.ucar.edu/software/netcdf/>`__
+-enabled software such as `Panoply <http://www.giss.nasa.gov/tools/panoply/>`__
+(available for `MS-Windows`, `Linux`, or `macOS`).
+
+Output on the native model grid, which users may either download
+(:numref:`download-solution`) or generate themselves
+(:numref:`rerun-alpha-version`), can alternatively be displayed and
+analyzed using the `gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__
+toolbox :cite:`for-eta:15`. A few standard
+workflow examples are documented in :numref:`postprocess`.
+
+Users can either install the
+`Matlab <https://www.mathworks.com/products/matlab.html>`__ version of
+`gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ as follows:
 
 ::
 
     git clone https://github.com/gaelforget/gcmfaces
 
-or the `Octave` version by executing:
+or install the `Octave <https://www.gnu.org/software/octave/>`__ version of
+`gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ as follows:
 
 ::
 
     git clone -b octave https://github.com/gaelforget/gcmfaces
 
-For more information about `gcmfaces`, please consult `its user guide <http://gcmfaces.readthedocs.io/en/latest/>`__.
-
+For more information about `gcmfaces`, please consult
+`its user guide <http://gcmfaces.readthedocs.io/en/latest/>`__.

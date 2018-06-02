@@ -1,23 +1,33 @@
 
 .. _runs:
 
-Rerun / Modify
-**************
+Compute
+*******
 
-This section explains how the `MITgcm` can be used to re-run `CBIOMES-global (alpha version)` over the 1992–2011 period (:numref:`rerun-alpha-version`).
+This section explains how users can re-run `CBIOMES-global (alpha version)`
+using the `numerical ocean model <https://mitgcm.readthedocs.io/en/latest/>`__,
+post-process the model output, and experiment with the model solutions.
 
 .. _computers:
 
 .. rubric:: Required Computational Environment
 
-Running the model on a linux cluster requires `gcc` and `gfortran` (or alternative compilers), `mpi` libraries (for parallel computation), and `netcdf` libraries (e.g., for the `profiles` package) as explained in the `MITgcm documentations <http://mitgcm.org/public/docs.html>`__.
+This section assumes that the
+`numerical ocean model <https://mitgcm.readthedocs.io/en/latest/>`__, the
+`CBIOMES-global` setup, and model inputs have been installed according to
+the :ref:`mitgcmdirs` (see :numref:`download-setup`). Running the model further
+requires `gcc` and `gfortran` (or alternative compilers),
+`mpi` libraries (parallel computing), and
+`Netcdf <https://www.unidata.ucar.edu/software/netcdf/>`__ libraries (not always)
+as explained in the `MITgcm documentation <https://mitgcm.readthedocs.io/en/latest/>`__.
 
 .. _rerun-alpha-version:
 
-Rerun Model
------------
+Run Model
+---------
 
-This section assumes that `MITgcm`, the `CBIOMES-global` setup, and model inputs have been installed according to the :ref:`mitgcmdirs` (see :numref:`download-setup`). Users can then :ref:`baseline` the model to reproduce `CBIOMES-global (alpha version)`.
+Users can :ref:`baseline` the `CBIOMES-global (alpha version)`
+model setup as follows:
 
 .. _baseline:
 
@@ -46,9 +56,32 @@ This section assumes that `MITgcm`, the `CBIOMES-global` setup, and model inputs
 
 .. note::
 
-   On most clusters, users would call ``mpiexec`` (or ``mpirun``) via a queuing system rather than directly from the command line. Other compiler options, besides ``linux_amd64_gfortran``, are provided by the `MITgcm` development team in ``MITgcm/tools/build_options/`` for cases when `gfortran` is not available.
+   On most clusters, users would call ``mpiexec`` (or ``mpirun``) via
+   queuing systems rather than directly from the command line. Users
+   who may prefer another compiler than `gfortran` may find
+   useful alternatives to `linux_amd64_gfortran`` in the
+   ``MITgcm/tools/build_options/`` subdirectory.
 
 .. note::
 
-   The above is not quite complete -- need to add biogeochemistry and ecosystem forcing. Also: still need to add `pleiades` and `AWS` recipes.
+   The above is not quite complete -- need to add biogeochemistry and
+   ecosystem forcing. Also: still need to add `pleiades` and `AWS` recipes.
 
+.. Next subsection deals with postprocessing
+
+.. _postprocess:
+
+Process Output
+--------------
+
+.. include:: postprocess.inc
+
+Experiment
+----------
+
+The following paragraphs outline a few of the methods that can be used to
+experiment with the model solutions.
+
+::
+
+    To be continued...

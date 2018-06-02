@@ -1,5 +1,5 @@
 
-Users can donwload the model and its global setup by typing:
+Users can donwload the numerical model and its global setup as follows:
 
 ::
 
@@ -9,7 +9,11 @@ Users can donwload the model and its global setup by typing:
     mkdir MITgcm/mysetups
     mv CBIOMES MITgcm/mysetups/.
 
-Re-running `CBIOMES-global (alpha version)` additionally requires downloading surface forcing input (96G), initial condition, grid, etc. input (610M), and observational input (25G) as follows:
+Re-running the model solution from :numref:`download-solution` (see
+:numref:`rerun-alpha-version` for directions) additionally requires air-sea
+forcing input (96G), initial conditions, grid, etc. input (610M), and
+observational data to evaluate the accuracy of solutions (25G).
+These can be downloaded as follows:
 
 ::
 
@@ -20,8 +24,3 @@ Re-running `CBIOMES-global (alpha version)` additionally requires downloading su
     mv mit.ecco-group.org/ecco_for_las/version_4/release2/input_forcing forcing_baseline2
     mv mit.ecco-group.org/ecco_for_las/version_4/release2/input_ecco inputs_baseline2
     mv mit.ecco-group.org/ecco_for_las/version_4/release2/input_init inputs_baseline2/.
-
-.. note::
-
-   The above is not quite complete -- need to add biogeochemistry and ecosystem forcing.
-

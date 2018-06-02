@@ -19,8 +19,3 @@
 .. note::
 
    Some subdirectories are omitted in this depiction.
-
-.. note::
-
-   The above is not quite complete -- need to add biogeochemistry and ecosystem forcing.
-
