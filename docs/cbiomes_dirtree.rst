@@ -15,6 +15,7 @@
          input/                (run-time settings)
          forcing_baseline2/    (user installed)
          inputs_baseline2/     (user installed)
+         inputs_drwn3/         (user installed)
 
 .. note::
 

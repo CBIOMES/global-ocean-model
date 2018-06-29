@@ -21,21 +21,17 @@ Download Ouput
 Download Model
 --------------
 
-.. include:: cbiomes_setup.rst
-
 The :numref:`rerun-alpha-version` instructions to :ref:`baseline` the model
 and reproduce the output in :numref:`download-solution` are based on the
-:ref:`mitgcmdirs` shown below.
+:ref:`mitgcmdirs` shown below. 
+
+.. include:: cbiomes_setup.rst
 
 .. _mitgcmdirs:
 
 .. rubric:: Recommended Directory Organization
 
 .. include:: cbiomes_dirtree.rst
-
-.. note::
-
-   The above is not quite complete -- need to add biogeochemistry and ecosystem forcing.
 
 .. _download-tools:
 

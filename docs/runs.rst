@@ -38,9 +38,9 @@ model setup as follows:
     #1) compile model
     cd MITgcm/mysetups/CBIOMES/build
     ../../../tools/genmake2 -mods=../code -optfile \
-         ../../../tools/build_options/linux_amd64_gfortran -mpi
+         ../inputs_drwn3/linux_amd64_ifort+mpi_ice_nas -mpi
     make depend
-    make -j 4
+    make -j 4 > make.log
     cd ..
 
     #2) link files into run directory
@@ -50,6 +50,8 @@ model setup as follows:
     ln -s ../input/* .
     ln -s ../inputs_baseline2/input*/* .
     ln -s ../forcing_baseline2 .
+    ln -s ../inputs_drwn3/input*/* .
+    ln -s ../inputs_drwn3/* .
 
     #3) run model
     mpiexec -np 360 ./mitgcmuv
@@ -57,15 +59,12 @@ model setup as follows:
 .. note::
 
    On most clusters, users would call ``mpiexec`` (or ``mpirun``) via
-   queuing systems rather than directly from the command line. Users
-   who may prefer another compiler than `gfortran` may find
-   useful alternatives to `linux_amd64_gfortran`` in the
+   queuing systems rather than directly from the command line. The included
+   `linux_amd64_ifort+mpi_ice_nas` option file is geared towards an `ifort`
+   compiler and the `pleiades` computer. Users who employ another
+   compiler / computer pair may find useful alternatives
+   to `linux_amd64_ifort+mpi_ice_nas`` in the
    ``MITgcm/tools/build_options/`` subdirectory.
-
-.. note::
-
-   The above is not quite complete -- need to add biogeochemistry and
-   ecosystem forcing. Also: still need to add `pleiades` and `AWS` recipes.
 
 .. Next subsection deals with postprocessing
 
