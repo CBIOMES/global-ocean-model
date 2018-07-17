@@ -1,5 +1,11 @@
 
-Users can donwload the numerical model and its global setup as follows:
+Re-running the ocean model solution from :numref:`download-solution` (see
+:numref:`rerun-alpha-version` for directions) requires the numerical model (1G),
+surface boundary conditions (96G), initial conditions, grid, etc. (610M),
+and observational data sets to evaluate the model solution accuracy (25G).
+
+
+The numerical model and its global setup can be downloaded as follows:
 
 ::
 
@@ -10,12 +16,7 @@ Users can donwload the numerical model and its global setup as follows:
     mv CBIOMES MITgcm/mysetups/.
     mkdir MITgcm/mysetups/CBIOMES/build
 
-Re-running the model solution from :numref:`download-solution` (see
-:numref:`rerun-alpha-version` for directions) additionally requires air-sea
-forcing input (96G), initial conditions, grid, etc. input (610M), and
-observational data to evaluate the accuracy of solutions (25G).
-
-For the physical oceanography model, these can be downloaded as follows:
+The physical oceanography model input can be downloaded as follows:
 
 ::
 
@@ -27,8 +28,7 @@ For the physical oceanography model, these can be downloaded as follows:
     mv mit.ecco-group.org/ecco_for_las/version_4/release2/input_ecco inputs_baseline2
     mv mit.ecco-group.org/ecco_for_las/version_4/release2/input_init inputs_baseline2/.
 
-For the biochemistry and ecology model, `inputs_drwn3/` should be downloaded from dropbox.
-
 .. note::
 
-   Please contact us to get access to the dropbox folders (since they are not yet public).
+   Additional input is needed for the biochemistry and ecology model. Please
+   contact us to get access to the dropbox folders (since they are not yet public).

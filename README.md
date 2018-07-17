@@ -2,7 +2,7 @@
 
 **Content:**
 
-This repository contains model settings ([code/](code/), [input/](input/)) and documentation ([readthedocs](http://eccov4.readthedocs.io/en/latest/)) that allow users to download, analyze, rerun, or modify CBIOMES global ocean state estimates using the [MIT general circulation model][], the [Darwin Project model][] of marine biogeochemistry and microbial communities, and various analysis software.
+This repository contains model settings ([code/](code/), [input/](input/)) and documentation ([readthedocs](http://cbiomes.readthedocs.io/en/latest/)) that allow users to either download  CBIOMES global ocean state estimates or compute them using the [MIT general circulation model][] of ocean phyics and the [Darwin Project model][] of marine biogeochemistry and microbial communities.
 
 <!--- via on-premise cluster or via Amazon Web Services (see [example_scripts/](example_scripts/)). --->
 
@@ -13,7 +13,7 @@ This repository contains model settings ([code/](code/), [input/](input/)) and d
 [MIT general circulation model]: https://mitgcm.readthedocs.io/en/latest/
 [Darwin Project model]: http://darwinproject.mit.edu/
 [Amazon Web Services' cfncluster]: https://aws.amazon.com/hpc/cfncluster/
-[gcmfaces]: https://github.com/gaelforget/gcmfaces
+[gcmfaces]: http://gcmfaces.readthedocs.io/en/latest/
 [MITprof]: https://github.com/gaelforget/MITprof
 
 **CBIOMES-global (alpha version):** 

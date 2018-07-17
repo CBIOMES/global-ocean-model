@@ -26,12 +26,12 @@ as explained in the `MITgcm documentation <https://mitgcm.readthedocs.io/en/late
 Run Model
 ---------
 
-Users can :ref:`baseline` the `CBIOMES-global (alpha version)`
+Users can :ref:`compilerun` the `CBIOMES-global (alpha version)`
 model setup as follows:
 
-.. _baseline:
+.. _compilerun:
 
-.. rubric:: Compile, Link, And Run
+.. rubric:: Compile And Run
 
 ::
 

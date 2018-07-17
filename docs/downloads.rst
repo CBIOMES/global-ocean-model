@@ -21,17 +21,21 @@ Download Ouput
 Download Model
 --------------
 
-The :numref:`rerun-alpha-version` instructions to :ref:`baseline` the model
-and reproduce the output in :numref:`download-solution` are based on the
-:ref:`mitgcmdirs` shown below. 
-
-.. include:: cbiomes_setup.rst
+The :numref:`rerun-alpha-version` instructions to :ref:`compilerun` the model
+in order to reproduce the output in :numref:`download-solution` assume that
+:ref:`modelinput` have been downloaded and organized as follows:
 
 .. _mitgcmdirs:
 
 .. rubric:: Recommended Directory Organization
 
 .. include:: cbiomes_dirtree.rst
+
+.. _modelinput:
+
+.. rubric:: Code And Input
+
+.. include:: cbiomes_setup.rst
 
 .. _download-tools:
 

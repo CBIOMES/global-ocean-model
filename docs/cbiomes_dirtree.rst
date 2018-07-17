@@ -2,21 +2,18 @@
 ::
 
    MITgcm/
-     model/   (MITgcm core)
-     pkg/     (MITgcm modules)
-       gud/   (biochemistry and ecosystem modules)
-     tools/
-       genmake2        (shell script)
-       build_options   (compiler options)
-     mysetups/         (user created)
+     model/   (MITgcm core code)
+     pkg/
+       gud/   (bgc + ecosystem modules)
+       + other subdirectories
+     mysetups/
        CBIOMES/
-         build/                (build directory)
          code/                 (compile-time settings)
          input/                (run-time settings)
-         forcing_baseline2/    (user installed)
-         inputs_baseline2/     (user installed)
-         inputs_drwn3/         (user installed)
-
-.. note::
-
-   Some subdirectories are omitted in this depiction.
+         inputs_drwn3/         (binary model input)
+         + other subdirectories
+     tools/
+       genmake2        (makefile generation script)
+       build_options   (various compiler options)
+       + other subdirectories
+     + other subdirectories
