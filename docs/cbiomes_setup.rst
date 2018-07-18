@@ -1,11 +1,11 @@
 
-Re-running the ocean model solution from :numref:`download-solution` (see
-:numref:`rerun-alpha-version` for directions) requires the numerical model (1G),
+Re-running the ocean model solution from :numref:`download-solution` based on
+the :numref:`rerun-alpha-version` recipe requires the ocean model setup (1G),
 surface boundary conditions (96G), initial conditions, grid, etc. (610M),
-and observational data sets to evaluate the model solution accuracy (25G).
+and observational data to evaluate the model solution accuracy (25G).
 
 
-The numerical model and its global setup can be downloaded as follows:
+The ocean model code and its global setup can be downloaded as follows:
 
 ::
 
@@ -16,7 +16,7 @@ The numerical model and its global setup can be downloaded as follows:
     mv CBIOMES MITgcm/mysetups/.
     mkdir MITgcm/mysetups/CBIOMES/build
 
-The physical oceanography model input can be downloaded as follows:
+For the physics, model input can be downloaded as follows:
 
 ::
 
@@ -30,5 +30,6 @@ The physical oceanography model input can be downloaded as follows:
 
 .. note::
 
-   Additional input is needed for the biochemistry and ecology model. Please
-   contact us to get access to the dropbox folders (since they are not yet public).
+   Additional model input is needed for the biochemistry and ecology. Please
+   contact us to get access to the corresponding dropbox folders (since
+   they are not yet publicly available).

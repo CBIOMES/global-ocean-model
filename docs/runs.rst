@@ -4,22 +4,10 @@
 Compute
 *******
 
-This section explains how users can re-run `CBIOMES-global (alpha version)`
-using the `numerical ocean model <https://mitgcm.readthedocs.io/en/latest/>`__,
-post-process the model output, and experiment with the model solutions.
-
-.. _computers:
-
-.. rubric:: Required Computational Environment
-
-This section assumes that the
-`numerical ocean model <https://mitgcm.readthedocs.io/en/latest/>`__, the
-`CBIOMES-global` setup, and model inputs have been installed according to
-the :ref:`mitgcmdirs` (see :numref:`download-setup`). Running the model further
-requires `gcc` and `gfortran` (or alternative compilers),
-`mpi` libraries (parallel computing), and
-`Netcdf <https://www.unidata.ucar.edu/software/netcdf/>`__ libraries (not always)
-as explained in the `MITgcm documentation <https://mitgcm.readthedocs.io/en/latest/>`__.
+This following recipes allow users to re-run `CBIOMES-global (alpha version)`
+(:numref:`rerun-alpha-version`),
+post-process its output (:numref:`postprocess`),
+and experiment with the model (:numref:`experiment`).
 
 .. _rerun-alpha-version:
 
@@ -27,7 +15,23 @@ Run Model
 ---------
 
 Users can :ref:`compilerun` the `CBIOMES-global (alpha version)`
-model setup as follows:
+model as explained below. Documentation of the model setup is provided
+in :cite:`for-eta:15` (global configuration + physics) and
+in the :numref:`download-solution` folder (biochemistry + ecology).
+
+.. _requirements-run:
+
+.. rubric:: Prerequisites
+
+The following recipe assumes that :ref:`modelinput` have been installed
+as shown in :ref:`mitgcmdirs` (see :numref:`download-setup`). Running the
+model further requires a computer cluster equipped with
+`gcc and gfortran <https://gcc.gnu.org/wiki/GFortran>`__, or alternative
+compilers, and `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`__
+libraries for parallel computing (see
+`MITgcm documentation <https://mitgcm.readthedocs.io/en/latest/>`__).
+`Netcdf <https://www.unidata.ucar.edu/software/netcdf/>`__ libraries
+are also useful but not required.
 
 .. _compilerun:
 
@@ -58,28 +62,30 @@ model setup as follows:
 
 .. note::
 
-   On most clusters, users would call ``mpiexec`` (or ``mpirun``) via
-   queuing systems rather than directly from the command line. The included
+   On most computer clusters, users would call ``mpiexec`` (or ``mpirun``) via
+   queuing systems rather than directly from the command line. The quoted
    `linux_amd64_ifort+mpi_ice_nas` option file is geared towards an `ifort`
-   compiler and the `pleiades` computer. Users who employ another
-   compiler / computer pair may find useful alternatives
-   to `linux_amd64_ifort+mpi_ice_nas`` in the
-   ``MITgcm/tools/build_options/`` subdirectory.
+   compiler and the `pleiades` computer. Alternative option files for other
+   compilers and computers can be found in the ``MITgcm/tools/build_options/``
+   subdirectory.
 
 .. Next subsection deals with postprocessing
 
 .. _postprocess:
 
-Process Output
---------------
+Post-Process
+------------
 
 .. include:: postprocess.inc
+
+.. _experiment:
 
 Experiment
 ----------
 
-The following paragraphs outline a few of the methods that can be used to
-experiment with the model solutions.
+This section outlines methods that allow users to modify and experiment with
+model settings -- this is often useful to better understand and improve upon
+existing solutions.
 
 ::
 
