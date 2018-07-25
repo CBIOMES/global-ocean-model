@@ -52,17 +52,14 @@ are also useful but not required.
     #1) go to model setup directory
     cd MITgcm/mysetups/CBIOMES/
 
-    #2) compile model
-    mkdir build
-    cd build
-    bash ../tools/shell/compile_model.sh
+    #2) compile model in build/
+    bash tools/shell/compile_model.sh
 
-    #3) prepare run directory
-    mkdir ../run
-    cd ../run
-    bash ../tools/shell/prep_rundir.sh
+    #3) prepare run/ directory
+    bash tools/shell/prep_rundir.sh
 
-    #4) run model
+    #4) run model on 360 cores
+    cd run
     mpiexec -np 360 ./mitgcmuv
 
 .. note::
