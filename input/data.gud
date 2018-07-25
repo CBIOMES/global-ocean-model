@@ -1,7 +1,7 @@
 #######################
  &GUD_FORCING_PARAMS
  gud_chlInitBalanced= F,
- ironFile='iron/Mahowald_soluble_fedust_current_kgFem2s.R4_144x96x12.bin',
+ ironFile='Mahowald_soluble_fedust_current_kgFem2s.R4_144x96x12.bin',
  ironPeriod= -12.,
 # 1 kg Fe/m2/s is 1E6/56 mmol Fe/m2/s
  gud_inscal_iron= 17857.142857142858,
@@ -103,9 +103,9 @@
 ########################
  &GUD_RADTRANS_PARAMS
  gud_selectSolz=1,
- gud_waterabsorbFile='optics/optics_water_Aug2014_bandave25.txt',
- gud_phytoabsorbFile='optics/optics_phyto_10_bandave25_newsize5_diffsyn_zoo.txt',
- gud_particleabsorbFile='optics/optics_detritus_8_sameas4_bandave25.txt',
+ gud_waterabsorbFile='optics_water_Aug2014_bandave25.txt',
+ gud_phytoabsorbFile='optics_phyto_10_bandave25_newsize5_diffsyn_zoo.txt',
+ gud_particleabsorbFile='optics_detritus_8_sameas4_bandave25.txt',
  gud_radtrans_kmax=22,
  gud_waveband_edges=400,412.5,437.5,462.5,487.5,512.5,537.5,562.5,587.5,612.5,637.5,662.5,687.5,700,
  gud_waveband_centers=400,425,450,475,500,525,550,575,600,625,650,675,700,
