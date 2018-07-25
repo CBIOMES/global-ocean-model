@@ -1,23 +1,33 @@
 
 .. _runs:
 
-Compute
-*******
+Computations
+************
 
-This following recipes allow users to re-run `CBIOMES-global (alpha version)`
-(:numref:`rerun-alpha-version`),
-post-process its output (:numref:`postprocess`),
-and experiment with the model (:numref:`experiment`).
+This following recipes allow users to visualize CBIOMES-global (alpha version),
+reproduce it using the ocean model (:numref:`rerun-alpha-version`),
+post-process native grid output (:numref:`postprocess`), and
+experiment with the ocean model (:numref:`experiment`).
+
+.. _visualize-alpha-version:
+
+Visualization
+-------------
+
+::
+
+    To be added...
 
 .. _rerun-alpha-version:
 
-Run Model
+Model Run
 ---------
 
-Users can :ref:`compilerun` the `CBIOMES-global (alpha version)`
-model as explained below. Documentation of the model setup is provided
-in :cite:`for-eta:15` (global configuration + physics) and
-in the :numref:`download-solution` folder (biochemistry + ecology).
+The following recipe will :ref:`compilerun` the ocean model as needed to
+reproduce `CBIOMES-global (alpha version)`. Documentation
+of the model configuration is provided in :cite:`for-eta:15` (global
+grid + physics) and in the :numref:`download-solution`
+climatology folder (biochemistry + ecology).
 
 .. _requirements-run:
 
@@ -39,49 +49,45 @@ are also useful but not required.
 
 ::
 
-    #1) compile model
-    cd MITgcm/mysetups/CBIOMES/build
-    ../../../tools/genmake2 -mods=../code -optfile \
-         ../inputs_drwn3/linux_amd64_ifort+mpi_ice_nas -mpi
-    make depend
-    make -j 4 > make.log
-    cd ..
+    #1) go to model setup directory
+    cd MITgcm/mysetups/CBIOMES/
 
-    #2) link files into run directory
-    mkdir run
-    cd run
-    ln -s ../build/mitgcmuv .
-    ln -s ../input/* .
-    ln -s ../inputs_baseline2/input*/* .
-    ln -s ../forcing_baseline2 .
-    ln -s ../inputs_drwn3/input*/* .
-    ln -s ../inputs_drwn3/* .
+    #2) compile model
+    mkdir build
+    cd build
+    bash ../tools/shell/compile_model.sh
 
-    #3) run model
+    #3) prepare run directory
+    mkdir ../run
+    cd ../run
+    bash ../tools/shell/prep_rundir.sh
+
+    #4) run model
     mpiexec -np 360 ./mitgcmuv
 
 .. note::
 
-   On most computer clusters, users would call ``mpiexec`` (or ``mpirun``) via
-   queuing systems rather than directly from the command line. The quoted
-   `linux_amd64_ifort+mpi_ice_nas` option file is geared towards an `ifort`
-   compiler and the `pleiades` computer. Alternative option files for other
-   compilers and computers can be found in the ``MITgcm/tools/build_options/``
-   subdirectory.
+   Two modifications of this workflow can be needed depending on the computing environment.
+   First, on most computer clusters, ``mpiexec`` (or ``mpirun``) is called via
+   a queuing system rather than directly from the command line as shown here.
+   Second, `compile_model.sh` uses an `linux_amd64_ifort+mpi_ice_nas` option
+   file that suits the `ifort` compiler on the `pleiades` computer. Option files
+   that may better suit other compilers and computers can be found in
+   the ``MITgcm/tools/build_options/`` subdirectory.
 
 .. Next subsection deals with postprocessing
 
 .. _postprocess:
 
-Post-Process
-------------
+Processing
+----------
 
 .. include:: postprocess.inc
 
 .. _experiment:
 
-Experiment
-----------
+Experiments
+-----------
 
 This section outlines methods that allow users to modify and experiment with
 model settings -- this is often useful to better understand and improve upon

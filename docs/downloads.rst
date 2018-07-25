@@ -1,73 +1,71 @@
 
 .. _downloads:
 
-Download
-********
+Downloads
+*********
 
-The following recipes download `CBIOMES-global` model output
-(:numref:`download-solution`), tools to manipulate model output
+The following recipes allow users to download `CBIOMES-global` model output
+(:numref:`download-solution`), tools to manipulate this output
 (:numref:`download-tools`), and the `CBIOMES-global` model setup
 (:numref:`download-setup`).
 
 .. _download-solution:
 
-Download Ouput
---------------
+Output
+------
 
 .. include:: cbiomes_output.rst
 
 .. _download-tools:
 
-Download Tools
---------------
+Tools
+-----
 
-For applications that require accurate diagnostic computations, native grid
-output can be preferable to interpolated output. To manipulate native grid
-output, which users may either have downloaded (:numref:`download-solution`)
-or generated themselves (:numref:`rerun-alpha-version`), one can use the
-`gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ toolbox :cite:`for-eta:15`
-with `Matlab <https://www.mathworks.com/products/matlab.html>`__ (pro) or
-`Octave <https://www.gnu.org/software/octave/>`__ (free).
-Examples of `gcmfaces`-based worflows are documented in :numref:`postprocess`.
-For more information about `gcmfaces`, please consult
-`its user guide <http://gcmfaces.readthedocs.io/en/latest/>`__.
-
-To download the `Matlab <https://www.mathworks.com/products/matlab.html>`__
-version of `gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ proceed
-as follows:
-
-::
-
-    git clone https://github.com/gaelforget/gcmfaces
-
-To instead download the `Octave <https://www.gnu.org/software/octave/>`__ version
-of `gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ proceed as follows:
-
-::
-
-    git clone -b octave https://github.com/gaelforget/gcmfaces
-
-:numref:`postprocess` originally relied on the `nctilesdev` version
-which could be downloaded as follows:
+Accurate computational workflows often require native grid output rather
+than interpolated output. Manipulation of native grid output,
+which users may have either downloaded (:numref:`download-solution`) or
+generated themselves (:numref:`rerun-alpha-version`), is facilitated by the
+`gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ toolbox :cite:`for-eta:15`.
+This toolbox is available for `Matlab <https://www.mathworks.com/products/matlab.html>`__
+(proprietary) and `Octave <https://www.gnu.org/software/octave/>`__
+(free); it can be downloaded as follows:
 
 ::
 
     git clone -b nctilesdev https://github.com/gaelforget/gcmfaces
 
+The :numref:`visualize-alpha-version` and :numref:`postprocess` applications
+rely on `gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ along with
+`CBIOMES`-specific codes which can in turn be downloaded as follows:
+
+::
+
+    git clone https://github.com/darwinproject/tmp_code_devel CBIOMES-tools
+    git clone https://github.com/gaelforget/CBIOMES CBIOMES-setup
+
 .. note::
 
-   The `Octave` and `nctilesdev` branches should soon get merged into the
-   main branch.
-
+   The `nctilesdev` and `Octave` branches should soon get merged into the
+   `Master` branch.
 
 .. _download-setup:
 
-Download Model
---------------
+Model
+-----
 
-The :numref:`rerun-alpha-version` recipe to :ref:`compilerun` the model
-in order to reproduce the output in :numref:`download-solution` assume that
-:ref:`modelinput` have been downloaded and organized as follows:
+The :numref:`rerun-alpha-version` recipes to :ref:`compilerun` the ocean model
+allow users to reproduce `CBIOMES-global` solutions. This requires the
+ocean model :ref:`modelinput` (surface boundary conditions, initial
+conditions, grid, etc.). Provided scripts, `dowload_setup.sh` and
+`dowload_input.sh`, download these various elements along
+with the :numref:`download-tools` tools and organize directories as
+expected by the :numref:`rerun-alpha-version` recipes (:ref:`mitgcmdirs`).
+
+.. _modelinput:
+
+.. rubric:: Code, Setup, And Input
+
+.. include:: cbiomes_setup.rst
 
 .. _mitgcmdirs:
 
@@ -75,8 +73,9 @@ in order to reproduce the output in :numref:`download-solution` assume that
 
 .. include:: cbiomes_dirtree.rst
 
-.. _modelinput:
+.. note::
 
-.. rubric:: Code, Setup, And Input
-
-.. include:: cbiomes_setup.rst
+   `inputs_drwn3/` is not currently installed by `dowload_input.sh` even though
+   it is needed for the biochemistry and ecology. Please contact us to get
+   access to the corresponding dropbox folder and place its content as
+   shown in :ref:`mitgcmdirs`.
