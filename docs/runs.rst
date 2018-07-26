@@ -14,9 +14,19 @@ experiment with the ocean model (:numref:`experiment`).
 Visualization
 -------------
 
+Each `Netcdf` file generated via :ref:`reformat` recipes satisfies the
+so-called `CF  conventions <http://cfconventions.org/>`__.  This is the
+case of all `Netcdf` files found in the `CBIOMES-global (alpha version)`
+monthly climatology folder, which can thus readily be ingested and visualized
+using software such as `Panoply <https://www.giss.nasa.gov/tools/panoply/>`__
+and many others.
+Furthermore, each `nctiles` collection generated via :ref:`reformat` recipes can
+be ingested by `gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ which
+provides several methods to visualize native grid output.
+
 ::
 
-    To be added...
+    To be Continued ...
 
 .. _rerun-alpha-version:
 
