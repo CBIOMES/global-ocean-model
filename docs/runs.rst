@@ -4,7 +4,8 @@
 Computations
 ************
 
-This following recipes allow users to visualize CBIOMES-global (alpha version),
+This following recipes allow users to visualize CBIOMES-global (alpha version)
+(:numref:`visualize-alpha-version`),
 reproduce it using the ocean model (:numref:`rerun-alpha-version`),
 post-process native grid output (:numref:`postprocess`), and
 experiment with the ocean model (:numref:`experiment`).
