@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git clone --branch cube92 git://gud.mit.edu/gud-dev
-mv gud-dev MITgcm
+git clone --branch cube92 git://gud.mit.edu/gud-dev2
+mv gud-dev2 MITgcm
 mkdir MITgcm/mysetups
 
 git clone https://github.com/gaelforget/CBIOMES
