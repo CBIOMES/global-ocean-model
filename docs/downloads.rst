@@ -40,7 +40,7 @@ rely on `gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ along with
 
 ::
 
-    git clone https://github.com/darwinproject/tmp_code_devel CBIOMES-tools
+    git clone https://github.com/darwinproject/CBIOMES-Processing.m CBIOMES-tools
     git clone https://github.com/gaelforget/CBIOMES CBIOMES-setup
 
 .. note::

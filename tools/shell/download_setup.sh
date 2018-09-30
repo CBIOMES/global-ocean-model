@@ -10,6 +10,6 @@ mv CBIOMES MITgcm/mysetups/.
 git clone -b nctilesdev https://github.com/gaelforget/gcmfaces
 mv gcmfaces MITgcm/mysetups/CBIOMES/tools/matlab/.
 
-git clone https://github.com/darwinproject/tmp_code_devel CBIOMES-tools
+git clone https://github.com/darwinproject/CBIOMES-Processing.m CBIOMES-tools
 mv CBIOMES-tools MITgcm/mysetups/CBIOMES/tools/matlab/.
 
