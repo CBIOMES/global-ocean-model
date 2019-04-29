@@ -1,8 +1,11 @@
 # CBIOMES-global
 
+[![DOI](https://zenodo.org/badge/134205999.svg)](https://zenodo.org/badge/latestdoi/134205999)
+[![Documentation Status](https://readthedocs.org/projects/cbiomes/badge/?version=latest)](https://cbiomes.readthedocs.io/en/latest/?badge=latest)
+
 **Content:**
 
-This repository contains model settings ([code/](code/), [input/](input/)) and documentation ([readthedocs](http://cbiomes.readthedocs.io/en/latest/)) that allow users to either download  CBIOMES global ocean state estimates or compute them using the [MIT general circulation model][] of ocean phyics and the [Darwin Project model][] of marine biogeochemistry and microbial communities.
+This repository contains the model configuration ([code/](code/), [input/](input/)) and documentation ([readthedocs](http://cbiomes.readthedocs.io/en/latest/)) that allow users to recompute or analyze CBIOMES-global solutions.
 
 <!--- via on-premise cluster or via Amazon Web Services (see [example_scripts/](example_scripts/)). --->
 
@@ -18,7 +21,7 @@ This repository contains model settings ([code/](code/), [input/](input/)) and d
 
 **CBIOMES-global (alpha version):** 
 
-CBIOMES-global (alpha version) is a global ocean state estimate that covers the period from 1992 to 2011. It is based on Forget et al 2015 for ocean physics and on Dutkiewicz et al 2015 for marine biogeochemistry and ecosystems. On the native model grid, it can be analyzed and manipulated using the [gcmfaces][] and [MITprof][] toolboxes. Interpolated fields in netcdf format are also available.
+CBIOMES-global (alpha version) is a global ocean state estimate that covers the period from 1992 to 2011. It is based on Forget et al 2015 for ocean physics [MIT general circulation model][] and on Dutkiewicz et al 2015 for marine biogeochemistry and ecosystems [Darwin Project model][]. On the native model grid, it can be analyzed and manipulated using the [gcmfaces][] and [MITprof][] toolboxes. Interpolated fields in netcdf format are also available.
 
 **References:**
 
