@@ -32,7 +32,7 @@ This toolbox is available for `Matlab <https://www.mathworks.com/products/matlab
 
 ::
 
-    git clone -b nctilesdev https://github.com/gaelforget/gcmfaces
+    git clone https://github.com/MITgcm/gcmfaces
 
 The :numref:`visualize-alpha-version` and :numref:`postprocess` applications
 rely on `gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ along with
@@ -42,11 +42,6 @@ rely on `gcmfaces <http://gcmfaces.readthedocs.io/en/latest/>`__ along with
 
     git clone https://github.com/darwinproject/CBIOMES-Processing.m CBIOMES-tools
     git clone https://github.com/gaelforget/CBIOMES CBIOMES-setup
-
-.. note::
-
-   The `nctilesdev` and `Octave` branches should soon get merged into the
-   `Master` branch.
 
 .. _download-setup:
 
